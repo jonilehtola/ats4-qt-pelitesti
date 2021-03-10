@@ -1,6 +1,6 @@
 #include "orkki.h"
 
-orkki::orkki()
+orkki::orkki(QObject *i):QThread(i)
 {
 
 }

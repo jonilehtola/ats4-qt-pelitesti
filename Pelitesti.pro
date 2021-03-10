@@ -17,10 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    orkki.cpp \
+    pelimalli.cpp \
+    pelimalliwidget.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    orkki.h \
+    pelimalli.h \
+    pelimalliwidget.h
 
 FORMS += \
     mainwindow.ui
