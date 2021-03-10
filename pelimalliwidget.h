@@ -13,6 +13,7 @@ public:
     explicit PelimalliWidget(QWidget *parent = nullptr);
 
 
+    void luoOrkki();
 signals:
 
 public slots:

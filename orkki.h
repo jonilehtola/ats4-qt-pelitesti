@@ -8,6 +8,9 @@ class orkki : public QThread
 {
     Q_OBJECT
 
+private:
+    QPoint kohde;
+    float nopeus = 1.0;
 
 public:
     void run() override {
@@ -22,6 +25,7 @@ public:
     QPoint sijainti;
     bool kuollut;
 
+    void liikuKohteeseen();
 signals:
     void muuttunut();
 };

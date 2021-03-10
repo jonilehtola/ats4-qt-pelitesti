@@ -24,3 +24,7 @@ void PelimalliWidget::paintEvent(QPaintEvent *event) {
 void PelimalliWidget::mousePressEvent(QMouseEvent *evt) {
     malli.ammu(evt->pos());
 }
+
+void PelimalliWidget::luoOrkki() {
+    malli.luoOrkki();
+}
