@@ -28,4 +28,5 @@ void Pelimalli::ammu(QPoint s) {
 std::list<orkki*> Pelimalli::annaOrkit() {
     std::list<orkki*> lista;
     lista.push_back(orc);
+    return lista;
 }
