@@ -11,6 +11,7 @@ void Pelimalli::luoOrkki() {
     connect(uusiOrkki, &orkki::muuttunut, this, &Pelimalli::orkkiMuuttunut);
     // connect(uusiOrkki, &orkki::finished, uusiOrkki, &QObject::deleteLater);
     uusiOrkki->start();
+    orcit.push_back(uusiOrkki);
 }
 
 void Pelimalli::orkkiMuuttunut() {
@@ -18,15 +19,13 @@ void Pelimalli::orkkiMuuttunut() {
 }
 
 void Pelimalli::ammu(QPoint s) {
-    if (orc != nullptr) {
+    for (const auto &orc: orcit) {
         if (QLineF(s, orc->sijainti).length() < 10) {
             orc->kuollut = true;
         }
     }
 }
 
-std::list<orkki*> Pelimalli::annaOrkit() {
-    std::list<orkki*> lista;
-    lista.push_back(orc);
-    return lista;
+std::list<orkki*>* Pelimalli::annaOrkit() {
+    return &orcit;
 }

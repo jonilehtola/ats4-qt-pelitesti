@@ -7,13 +7,13 @@
 class Pelimalli : public QObject
 {
     Q_OBJECT
-    orkki *orc = nullptr;
+    std::list<orkki*> orcit;
 public:
     explicit Pelimalli(QObject *parent = nullptr);
     void ammu(QPoint sijainti);
     void luoOrkki();
 
-    std::list<orkki *> annaOrkit();
+    std::list<orkki *>* annaOrkit();
 signals:
     void malliMuuttunut();
 

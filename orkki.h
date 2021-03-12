@@ -16,14 +16,14 @@ public:
     void run() override {
         while (!kuollut) {
             liikuKohteeseen();
-            QThread::sleep(1000);
+            QThread::msleep(1000);
             emit muuttunut();
         }
     }
 
     orkki(QObject *i);
     QPoint sijainti;
-    bool kuollut;
+    bool kuollut = false;
 
     void liikuKohteeseen();
 signals:
